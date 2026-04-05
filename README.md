@@ -1,9 +1,30 @@
 # tradusmart
-Tengo 217 videos que son parte de un curso de neurodinamica clínica.
-Los videos están en inglés y yo tengo que poneles el subtituado en inglés.
-Para eso estoy desarrollando con GPT una app.
-En la carpeta: "C:\Users\javier\Desktop\xJavier\videos NDS\Videos" guardo todos los videos originales.
-En "C:\Users\javier\Desktop\xJavier\videos NDS\transcripciones_srt" estan todos los .SRT en ingles hechos automaticmente por vimeo.
-En "C:\Users\javier\Desktop\xJavier\videos NDS\paratraducir"  coloco yo algunos de los SRT en ingles para que vayan a ser traducidos por la app que estoy haciendo.
-En "C:\Users\javier\Desktop\xJavier\videos NDS\traducidos" la app guarda automaticmente los SRT en español.
-en "C:\Users\javier\Desktop\xJavier\videos NDS\scripts" guardo los sripts de la app.
+
+Procesamiento automático de subtítulos `.srt` para videos en inglés, generando versiones en español listas para usar en el video final.
+
+El proyecto toma subtítulos `.srt` generados automáticamente, los traduce al español, mejora su redacción y ajusta su sincronización para que funcionen correctamente al incorporarlos o quemarlos en el video.
+
+## Objetivo
+
+Generar subtítulos en español que:
+- sean claros y naturales (no traducción literal)
+- mantengan una buena sincronización con el video
+
+Actualmente, el principal desafío del proyecto es el ajuste del timing de los subtítulos.
+
+## Estructura de trabajo (local)
+- `C:\Users\javier\Desktop\xJavier\videos NDS\` → Dentro de esta carpeta estan todas las demas subcarpetas 
+- `Videos/` → videos originales  
+- `transcripciones_srt/` → SRT en inglés (originales)  
+- `paratraducir/` → SRT a procesar  
+- `traducidos/` → SRT en español (salida)  
+- `scripts/` → scripts del proyecto  
+
+## Flujo de trabajo
+
+1. Copiar un `.srt` en inglés a `paratraducir`
+2. Ejecutar el script
+3. Traducción + mejora de redacción
+4. Ajuste de tiempos
+5. Salida en `traducidos`
+6. Uso del SRT en el video final
